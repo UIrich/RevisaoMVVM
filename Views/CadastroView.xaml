@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProvaMVVM.Views.CadastroView"
+             Title="CadastroView">
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15" VerticalOptions="Center">
+
+            <Label Text="Cadastro" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+
+            <Entry Placeholder="Nome" Text="{Binding Nome}" />
+            <Entry Placeholder="CPF" Text="{Binding CPF}" Keyboard="Numeric" />
+            <Entry Placeholder="Email" Text="{Binding Email}" Keyboard="Email" />
+            <Entry Placeholder="Senha" Text="{Binding Senha}" IsPassword="True" />
+            <DatePicker Date="{Binding DataNascimento}" />
+
+            <StackLayout Spacing="15" Margin="0,10,0,0">
+                <Button Text="Salvar" Command="{Binding CadastrarCommand}" HeightRequest="50" CornerRadius="10"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
